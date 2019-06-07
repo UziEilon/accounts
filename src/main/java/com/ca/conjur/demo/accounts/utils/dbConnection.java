@@ -42,26 +42,7 @@ public class dbConnection {
     }
 
 
-    private void getConnectionMy(String ip)
-    {
-        String addr = ip;
-        String dbName="conjurdemo";
-        String user="uzi";
-        String password="uzi";
-        String url = "jdbc:postgresql://"+addr+":5432/"+dbName;
-        Properties props = new Properties();
-        props.setProperty("user",user);
-        props.setProperty("password",password);
-        props.setProperty("ssl","false");
-        try {
-            conn = DriverManager.getConnection(url, props);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-    }
+    
 
     public accounts getAccounts()
     {
